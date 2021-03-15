@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="fr.doranco.myquizz">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyQuizz">
+        <service
+            android:name=".MusiqueService"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <activity android:name=".view.QuizzActivity" />
+        <activity android:name=".view.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <provider
+            android:authorities="fr.doranco.myquizz.controller.JoueurProvider"
+            android:name=".controller.JoueurProvider">
+        </provider>
+        <provider
+            android:authorities="fr.doranco.myquizz.controller.QuestionProvider"
+            android:name=".controller.QuestionProvider">
+        </provider>
+        <provider
+            android:authorities="fr.doranco.myquizz.controller.ReponseProvider"
+            android:name=".controller.ReponseProvider">
+        </provider>
+    </application>
+
+</manifest>

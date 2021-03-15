@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Quizz d Estelle</string>
+        <string name = "confirmationActualisation"> Etes-vous sûr de vouloir mettre à jour cet utilisateur ? </string>
+</resources>

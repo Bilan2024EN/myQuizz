@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="188dp"
+        tools:layout_editor_absoluteY="188dp">
+
+        <TextView
+            android:id="@+id/textViewtitre"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#FFFFFF"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:gravity="center"
+            android:text="Bonjour Veuillez saisir votre nom"
+            android:textAlignment="center"
+            android:textColor="#201F1F"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:ems="10"
+            android:hint="Merci de saisir votre nom"
+            android:inputType="textPersonName"
+            android:textColor="#191818"
+            android:textColorHint="#8BC34A" />
+
+        <Button
+            android:id="@+id/buttonCommencer"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="63dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="#6AA624"
+            android:backgroundTint="@color/holo_green_light"
+            android:gravity="center_horizontal"
+            android:onClick="commencerQuizz"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:text="Commencer le quizz" />
+
+        <Button
+            android:id="@+id/AfficherJoueurs"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="#6AA624"
+            android:backgroundTint="@color/holo_green_light"
+            android:gravity="center_horizontal"
+            android:onClick="onClickAfficher"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:text="Afficher les joueurs" />
+
+        <TextView
+            android:id="@+id/textViewListUsers"
+            android:layout_width="200dp"
+            android:layout_height="332dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Utilisateurs" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
